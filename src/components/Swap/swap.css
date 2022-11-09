@@ -1,0 +1,228 @@
+.swap_container {
+  margin-top: 200px;
+  width: 80%;
+  margin-bottom: 152px;
+}
+.swap_header {
+  font-family: "Satoshi";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 65px;
+  line-height: 120%;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 150px;
+  background: linear-gradient(93.25deg, #4486dc 9.29%, #4fe0b5 75.09%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.swap_step_container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.swap_card_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.swap_bar {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(93.25deg, #4486dc 9.29%, #4fe0b5 75.09%);
+  margin-bottom: 23px;
+  margin-bottom: 28px;
+}
+.swap_content {
+  max-width: 400px;
+  font-family: "Satoshi";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 130%;
+  color: #ffffff;
+}
+
+.swap_card_header_contaner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.swap_number {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 88px;
+  line-height: 120%;
+  background-color: transparent;
+  text-shadow: 1px 1px 1px #4fe0b5, 1px -1px 1px #4fe0b5, -1px 1px 1px #4486dc,
+    -1px -1px 1px #4486dc;
+}
+.swap_card_header {
+  max-width: 400px;
+  font-family: "Satoshi";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 120%;
+  margin-left: 24px;
+  color: #ffffff;
+}
+@media (max-width: 1900px) {
+  .swap_bar {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(93.25deg, #4486dc 9.29%, #4fe0b5 75.09%);
+    margin-bottom: 23px;
+    margin-bottom: 28px;
+  }
+  .swap_content {
+    max-width: 400px;
+    font-family: "Satoshi";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    color: #ffffff;
+  }
+  .swap_number {
+    font-size: 70px;
+  }
+  .swap_card_header {
+    max-width: 400px;
+    font-size: 32px;
+  }
+  .swap_card_container {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+@media (max-width: 1600px) {
+  .swap_bar {
+    margin-bottom: 10px;
+  }
+  .swap_content {
+    max-width: 300px;
+    font-size: 18px;
+  }
+  .swap_number {
+    font-size: 60px;
+  }
+  .swap_card_header {
+    max-width: 300px;
+    font-size: 25px;
+  }
+  .swap_header {
+    font-size: 55px;
+    margin-bottom: 100px;
+  }
+}
+@media (max-width: 1080px) {
+  .swap_container {
+    margin-top: 100px;
+  }
+  .swap_step_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    margin: 0 auto;
+  }
+  .swap_card_container {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .swap_bar {
+    margin-bottom: 10px;
+  }
+  .swap_content {
+    width: 100%;
+    font-size: 20px;
+    max-width: 100%;
+  }
+  .swap_number {
+    font-size: 80px;
+  }
+  .swap_card_header {
+    width: 100%;
+    font-size: 25px;
+  }
+  .swap_header {
+    font-size: 37px;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 600px) {
+  .swap_container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .swap_step_container {
+    width: 300px;
+  }
+  .swap_card_container {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .swap_bar {
+    margin-bottom: 10px;
+  }
+  .swap_content {
+    width: 100%;
+    font-size: 20px;
+    max-width: 100%;
+  }
+  .swap_number {
+    font-size: 60px;
+  }
+  .swap_card_header {
+    width: 100%;
+    font-size: 22px;
+  }
+  .swap_header {
+    font-size: 37px;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 400px) {
+  .swap_container {
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+  .swap_step_container {
+    width: 200px;
+  }
+  .swap_card_container {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .swap_bar {
+    margin-bottom: 10px;
+  }
+  .swap_content {
+    width: 100%;
+    font-size: 14px;
+    max-width: 100%;
+  }
+  .swap_number {
+    font-size: 40px;
+  }
+  .swap_card_header {
+    width: 100%;
+    font-size: 18px;
+    margin-left: 10px;
+  }
+  .swap_header {
+    font-size: 25px;
+    margin-bottom: 50px;
+  }
+}

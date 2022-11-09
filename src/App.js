@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Main from "./pages/Main";
+import "./fonts/Satoshi-Regular.ttf";
+import WhatAndWhere from "./pages/WhatAndWhere";
+import EarnAndSwap from "./pages/EarnAndSwap";
+import Sports from "./pages/Sports";
+import Footer from "./pages/Footer";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app_container">
+      <Main />
+      <WhatAndWhere />
+      <EarnAndSwap />
+      <Sports />
+      <Footer />
     </div>
   );
 }

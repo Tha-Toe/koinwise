@@ -1,0 +1,12 @@
+.footer_container {
+  background: #0b2241;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer_line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(93.25deg, #4486dc 9.29%, #4fe0b5 75.09%);
+}
