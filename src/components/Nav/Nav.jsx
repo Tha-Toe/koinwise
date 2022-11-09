@@ -2,19 +2,13 @@ import React, { useState } from "react";
 import "./nav.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown, faX } from "@fortawesome/free-solid-svg-icons";
-export default function Nav() {
-  const [buttonList] = useState([
-    { name: "Home" },
-    { name: "About" },
-    { name: "Buy" },
-    { name: "Rewards" },
-    { name: "Swap Process" },
-    { name: "Koin Sports" },
-    { name: "Our NFTs" },
-    { name: "Our Team" },
-  ]);
-  const [selected, setSelected] = useState("Home");
-  const [openDropDown, setOpenDropDown] = useState(false);
+export default function Nav({
+  buttonList,
+  selected,
+  setSelected,
+  openDropDown,
+  setOpenDropDown,
+}) {
   return (
     <div className="nav_container">
       <img src="/nav_logo.png" className="nav_logo" />

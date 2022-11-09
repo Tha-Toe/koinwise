@@ -28,8 +28,8 @@ export default function Earn() {
         compound daily.
       </div>
       <div className="earn_card_container">
-        {earnList.map((each) => (
-          <div className="earn_card_child">
+        {earnList.map((each, index) => (
+          <div className="earn_card_child" key={index}>
             <div className="earn_card_icon_container">
               <img src={each.img} alt="" className="earn_card_icon" />
             </div>

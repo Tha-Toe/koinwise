@@ -41,7 +41,7 @@ export default function KoinSports() {
         our cryptocurrency, Koinwise!
       </div>
       {koinSportsContent.map((each, index) => (
-        <div className="koinContent_container">
+        <div className="koinContent_container" key={index}>
           <div className="koin_content_header">{each.header}</div>
           <div className="koin_content_bar"></div>
           <div className="koin_content">{each.content}</div>
