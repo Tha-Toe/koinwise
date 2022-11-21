@@ -1,7 +1,23 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import "./earn.css";
 export default function Earn() {
+  const [earnHeaderTrueVisible, setEarnHeaderTrueVisible] = useState(false);
+  const { ref: earnHeaderRef, inView: earnHeaderVisible } = useInView();
+
+  const [earnCardTrueVisible, setEarnCardTrueVisible] = useState(false);
+  const { ref: earnCardRef, inView: earnCardVisible } = useInView();
+
+  useEffect(() => {
+    if (earnHeaderVisible) {
+      setEarnHeaderTrueVisible(true);
+    }
+    if (earnCardVisible) {
+      setEarnCardTrueVisible(true);
+    }
+  }, [earnHeaderVisible, earnCardVisible]);
+
   const [earnList] = useState([
     {
       header: "___% APR.",
@@ -23,11 +39,28 @@ export default function Earn() {
   ]);
   return (
     <div className="earn_container">
-      <div className="earn_header">
+      <div
+        className={`${"koin_stake_header"} ${
+          earnHeaderTrueVisible ? "earn_header_animation" : ""
+        }`}
+        ref={earnHeaderRef}
+      >
+        Koin Stake
+      </div>
+      <div
+        className={`${"earn_header"} ${
+          earnHeaderTrueVisible ? "earn_header_animation" : ""
+        }`}
+      >
         With Koinwise Coin staking, you can earn significant rewards that
         compound daily.
       </div>
-      <div className="earn_card_container">
+      <div
+        className={`${"earn_card_container"} ${
+          earnCardTrueVisible ? "earn_card_animation" : ""
+        }`}
+        ref={earnCardRef}
+      >
         {earnList.map((each, index) => (
           <div className="earn_card_child" key={index}>
             <div className="earn_card_icon_container">

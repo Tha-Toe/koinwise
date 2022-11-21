@@ -16,6 +16,23 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  position: relative;
+  transform: scale(0);
+}
+
+.swap_header_animation {
+  animation: swap_card_ani 0.7s ease-in;
+  transform: scale(1);
+}
+@keyframes swap_card_ani {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .swap_step_container {
@@ -24,6 +41,23 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
+  position: relative;
+  bottom: -200px;
+}
+
+.swap_step_animation {
+  animation: swap_step_ani 0.7s ease-in;
+  bottom: 0px;
+}
+@keyframes swap_step_ani {
+  from {
+    bottom: -200px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
 }
 
 .swap_card_container {

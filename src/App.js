@@ -11,7 +11,7 @@ function App() {
     { name: "Home" },
     { name: "About" },
     { name: "Buy" },
-    { name: "Rewards" },
+    { name: "Staking" },
     { name: "Swap Process" },
     { name: "Koin Sports" },
     { name: "Our NFTs" },

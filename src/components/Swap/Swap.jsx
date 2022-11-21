@@ -1,7 +1,23 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import "./swap.css";
 export default function Swap() {
+  const [swapHeaderTrueVisible, setSwapHeaderTrueVisible] = useState(false);
+  const { ref: swapHeaderRef, inView: swapHeaderVisible } = useInView();
+
+  const [swapStepTrueVisible, setSwapStepTrueVisible] = useState(false);
+  const { ref: swapStepRef, inView: swapStepVisible } = useInView();
+
+  useEffect(() => {
+    if (swapHeaderVisible) {
+      setSwapHeaderTrueVisible(true);
+    }
+    if (swapStepVisible) {
+      setSwapStepTrueVisible(true);
+    }
+  }, [swapHeaderVisible, swapStepVisible]);
+
   const [swapStep] = useState([
     {
       number: "1",
@@ -24,8 +40,20 @@ export default function Swap() {
   ]);
   return (
     <div className="swap_container">
-      <div className="swap_header">Koin-Swap</div>
-      <div className="swap_step_container">
+      <div
+        className={`${"swap_header"} ${
+          swapHeaderTrueVisible ? "swap_header_animation" : ""
+        }`}
+        ref={swapHeaderRef}
+      >
+        Koin-Swap
+      </div>
+      <div
+        className={`${"swap_step_container"} ${
+          swapHeaderTrueVisible ? "swap_step_animation" : ""
+        }`}
+        ref={swapStepRef}
+      >
         {swapStep.map((each, index) => (
           <div className="swap_card_container" key={index}>
             <div className="swap_card_header_contaner">

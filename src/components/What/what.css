@@ -18,7 +18,23 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   position: relative;
+  left: -50%;
+  opacity: 0;
+}
+.left_what_animation {
+  animation: left_what_ani 0.7s ease-in;
   left: 50px;
+  opacity: 1;
+}
+@keyframes left_what_ani {
+  from {
+    left: -50%;
+    opacity: 0;
+  }
+  to {
+    left: 50px;
+    opacity: 1;
+  }
 }
 .what_text {
   width: 864px;
@@ -28,10 +44,26 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 137%;
-
+  position: relative;
   color: #ffffff;
+  right: -50%;
+  opacity: 0;
 }
-
+.right_what_animation {
+  animation: right_what_ani 0.7s ease-in;
+  right: 0px;
+  opacity: 1;
+}
+@keyframes right_what_ani {
+  from {
+    right: -50%;
+    opacity: 0;
+  }
+  to {
+    right: 0px;
+    opacity: 1;
+  }
+}
 @media (max-width: 1650px) {
   .what_container {
     margin-top: 0px;

@@ -26,17 +26,50 @@
   background-clip: text;
   position: relative;
   margin-bottom: 20px;
+  transform: scale(0);
 }
+.where_header_animation {
+  animation: where_header_ani 0.5s ease-in;
+  transform: scale(1);
+  right: 0px;
+}
+@keyframes where_header_ani {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .where_text {
   font-family: "Satoshi";
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 137%;
-
+  position: relative;
+  bottom: -200px;
   color: #ffffff;
+  opacity: 0;
 }
-
+.where_instructions_animation {
+  animation: where_instructions_ani 0.5s ease-in;
+  bottom: 0;
+  opacity: 1;
+}
+@keyframes where_instructions_ani {
+  from {
+    bottom: -200px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
 @media (max-width: 1650px) {
   .where_header {
     font-size: 55px;

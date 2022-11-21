@@ -8,6 +8,7 @@
   padding-top: 90px;
   margin: 0 auto;
 }
+
 .sport_left_img {
   width: 346px;
   position: absolute;
@@ -41,6 +42,8 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 20px;
+  opacity: 0;
+  position: relative;
 }
 
 .koinSports_title {
@@ -51,6 +54,8 @@
   line-height: 120%;
   margin-bottom: 20px;
   color: #ffffff;
+  opacity: 0;
+  position: relative;
 }
 
 .koinSports_content {
@@ -62,6 +67,8 @@
   line-height: 150%;
   color: #ffffff;
   margin-bottom: 30px;
+  opacity: 0;
+  position: relative;
 }
 
 .koinContent_container {
@@ -69,6 +76,8 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  opacity: 0;
+  position: relative;
 }
 .koin_content_header {
   font-family: "Satoshi";
@@ -115,6 +124,8 @@
   line-height: 120%;
   color: #ffffff;
   margin-bottom: 24px;
+  opacity: 0;
+  position: relative;
 }
 
 .koin_detail {
@@ -125,6 +136,8 @@
   font-size: 24px;
   line-height: 150%;
   color: #ffffff;
+  opacity: 0;
+  position: relative;
 }
 
 .color_header {
@@ -139,6 +152,8 @@
   background-clip: text;
   text-fill-color: transparent;
   margin-bottom: 32px;
+  opacity: 0;
+  position: relative;
 }
 .special {
   font-family: "Satoshi";
@@ -148,6 +163,8 @@
   line-height: 150%;
   color: #ffffff;
   margin-bottom: 38px;
+  opacity: 0;
+  position: relative;
 }
 .what_are {
   font-family: "Satoshi";
@@ -157,6 +174,8 @@
   line-height: 120%;
   color: #ffffff;
   margin-bottom: 24px;
+  opacity: 0;
+  position: relative;
 }
 .what_are_content {
   width: 100%;
@@ -166,6 +185,8 @@
   font-size: 24px;
   line-height: 150%;
   color: #ffffff;
+  opacity: 0;
+  position: relative;
 }
 
 .ourPartner_container {
@@ -174,6 +195,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  opacity: 0;
+  position: relative;
 }
 .ourPartner {
   font-family: "Satoshi";
@@ -211,6 +234,8 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+  opacity: 0;
+  position: relative;
 }
 .ourTeam_content {
   width: 100%;
@@ -222,6 +247,8 @@
   color: #ffffff;
   margin-top: 32px;
   margin-bottom: 61px;
+  opacity: 0;
+  position: relative;
 }
 
 .team_member_container {
@@ -231,6 +258,8 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 180px;
+  opacity: 0;
+  position: relative;
 }
 .team_member {
   width: 23%;
@@ -267,7 +296,20 @@
   text-transform: uppercase;
   color: #ffffff;
 }
-
+.koinSportsAnimation {
+  animation: koin_sport_ani 0.7s ease-in;
+  opacity: 1;
+}
+@keyframes koin_sport_ani {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
 @media (max-width: 1900px) {
   .sport_left_img {
     width: 280px;
