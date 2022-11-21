@@ -20,7 +20,7 @@ export default function MainComponent() {
   }, [leftContainerVisible, rightContainerVisible]);
 
   return (
-    <div className="main_component_container">
+    <div className="main_component_container" id="home">
       <div
         className={`${"left_main_component"} ${
           leftContainerTrueVisible ? "left_main_animation" : ""

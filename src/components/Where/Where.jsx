@@ -18,7 +18,7 @@ export default function Where() {
     }
   }, [headerVisible, instructionVisible]);
   return (
-    <div className="where_container">
+    <div className="where_container" id="buy">
       <div className="where_child">
         <div
           className={`${"where_header"} ${

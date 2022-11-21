@@ -15,13 +15,14 @@ export default function Nav({
       <div className="nav_button_container">
         {buttonList.map((each, index) => (
           <div className="nav_button_child" key={index}>
-            <div
+            <a
               className="nav_button"
               key={index}
               onClick={() => setSelected(each.name)}
+              href={`#${each.id}`}
             >
               {each.name}
-            </div>
+            </a>
             <div
               className={`${
                 each.name === selected
@@ -48,9 +49,10 @@ export default function Nav({
           </div>
           <div className="mobile_menu_list_container">
             {buttonList.map((each, index) => (
-              <div
+              <a
                 className="mobile_menu_list_child"
                 key={index}
+                href={`#${each.id}`}
                 onClick={() => {
                   setSelected(each.name);
                   setOpenDropDown(false);
@@ -64,7 +66,7 @@ export default function Nav({
                   {each.name}
                 </div>
                 <div className="mobile_menu_underline"></div>
-              </div>
+              </a>
             ))}
           </div>
         </div>

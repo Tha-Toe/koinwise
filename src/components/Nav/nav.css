@@ -54,6 +54,7 @@
   padding: 0;
   color: #ffffff;
   margin-bottom: 8px;
+  text-decoration: none;
 }
 .nav_button_underLine {
   width: 70%;
@@ -189,6 +190,7 @@
     justify-content: center;
     width: 100%;
     cursor: pointer;
+    text-decoration: none;
   }
   .mobile_menu_list_text {
     cursor: pointer;

@@ -89,6 +89,7 @@ export default function KoinSports() {
         className={`${"koinSports_header"} ${
           koinSportsHeaderTrueVisible ? "koinSportsAnimation" : ""
         }`}
+        id="koin_sports"
       >
         Koin-Sports
       </div>
@@ -149,6 +150,7 @@ export default function KoinSports() {
         className={`${"color_header"} ${
           koinSportsNftTrueVisible ? "koinSportsAnimation" : ""
         }`}
+        id="our_nfts"
       >
         Sports NFT:
       </div>
@@ -193,6 +195,7 @@ export default function KoinSports() {
         className={`${"ourTeam"} ${
           teamTrueVisible ? "koinSportsAnimation" : ""
         }`}
+        id="our_team"
       >
         Our Team
       </div>

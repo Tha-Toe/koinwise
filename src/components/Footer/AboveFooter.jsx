@@ -21,9 +21,14 @@ export default function AboveFooter({
       </div>
       <div className="footer_menu_container">
         {buttonList.map((each, index) => (
-          <div className="footer_menu" key={index}>
+          <a
+            href={`#${each.id}`}
+            className="footer_menu"
+            key={index}
+            onClick={() => setSelected(each.name)}
+          >
             {each.name}
-          </div>
+          </a>
         ))}
       </div>
       <div className="footer_social_container">

@@ -39,7 +39,7 @@ export default function Swap() {
     },
   ]);
   return (
-    <div className="swap_container">
+    <div className="swap_container" id="swap_process">
       <div
         className={`${"swap_header"} ${
           swapHeaderTrueVisible ? "swap_header_animation" : ""
