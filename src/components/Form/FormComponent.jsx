@@ -125,7 +125,7 @@ export default function FormComponent() {
                       : each.matchname.length * 10
                   }px`,
                   border: `${
-                    selectedMatches.matchname === each.matchname
+                    selectedMatches?.matchname === each.matchname
                       ? "2px solid #2878e0"
                       : "none"
                   }`,
