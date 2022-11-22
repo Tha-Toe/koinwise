@@ -3,6 +3,8 @@ import { useState, useEffect, useRef } from "react";
 import "./formComponent.css";
 import { useMediaPredicate } from "react-media-hook";
 import fifaschedule from "../../fifaschedule.json";
+import Success from "../popup/Success";
+import Fail from "../popup/Fail";
 const useHorizontalScrollMatches = ({ matches }) => {
   const matchesScrollRef = useRef();
 
@@ -37,14 +39,62 @@ export default function FormComponent() {
 
   const [matches, setMatches] = useState([]);
   const matchesRef = useHorizontalScrollMatches({ matches });
-  const [selected, setSelected] = useState(null);
+  const [selectedTeam, setSelectedTeam] = useState(null);
 
   const [selectedMatches, setSelectedMatches] = useState(null);
 
   const currWidthLessThan900 = useMediaPredicate("(max-width : 900px)");
   const currWidthLessThan400 = useMediaPredicate("(max-width: 400px)");
+
+  const [inputData, setInputData] = useState({
+    name: "",
+    email: "",
+    wallet_address: "",
+    facebook_post_link: "",
+    twitter_post_link: "",
+    referal_email: "",
+  });
+
+  const handleChange = (e) => {
+    setError(null);
+    setInputData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+  const [success, setSuccess] = useState(false);
+  const [fail, setFail] = useState(false);
+  const [error, setError] = useState(null);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setError(null);
+    if (!inputData.name) {
+      setError("Please enter your name");
+    } else if (!inputData.email) {
+      setError("Please enter your email");
+    } else if (!inputData.wallet_address) {
+      setError("Please enter your wallet address");
+    } else if (!inputData.facebook_post_link) {
+      setError("Please enter your facebook post link");
+    } else if (!inputData.twitter_post_link) {
+      setError("Please enter your twitter post link");
+    } else if (!inputData.referal_email) {
+      setError("Please enter your referal email");
+    } else {
+      setSuccess(true);
+      setSelectedMatches(null);
+      setSelectedTeam(null);
+      setInputData({
+        name: "",
+        email: "",
+        wallet_address: "",
+        facebook_post_link: "",
+        twitter_post_link: "",
+        referal_email: "",
+      });
+    }
+  };
   return (
     <div className="form_component_container">
+      {success && <Success setSuccess={setSuccess} />}
+      {fail && <Fail setFail={setFail} />}={" "}
       <div className="form_title">Rewards Programs</div>
       <div className="sub_title">
         Select the winning team of the day and earn 1,500 KIS tokens and whoever
@@ -57,7 +107,7 @@ export default function FormComponent() {
       <div className="margin_bar_form"></div>
       {matches.length > 0 && (
         <>
-          <div className="fifa_title">Select FIFA Match</div>
+          <div className="fifa_title">Select your match</div>
           <div className="matches_container" ref={matchesRef}>
             {matches.map((each, index) => (
               <div
@@ -78,7 +128,12 @@ export default function FormComponent() {
                   }px`,
                 }}
                 key={index}
-                onClick={() => setSelectedMatches(each)}
+                onClick={() => {
+                  if (selectedMatches?.matchname !== each.matchname) {
+                    setSelectedMatches(each);
+                    setSelectedTeam(null);
+                  }
+                }}
               >
                 <div className="match_name">{each["matchname"]}</div>
                 <div className="match_time">{each.matchdate}</div>
@@ -87,54 +142,85 @@ export default function FormComponent() {
           </div>
           {selectedMatches && (
             <>
-              <div className="fifa_title">Select FIFA Team</div>
+              <div className="fifa_title">Select your team</div>
               <div className="select_container">
                 <img
                   src={`/${selectedMatches["team 1"].split(" ").join("_")}.png`}
                   alt=""
                   className="flag"
-                  onClick={() => setSelected(selectedMatches["team 1"])}
+                  onClick={() => setSelectedTeam(selectedMatches["team 1"])}
                 />
                 <div className="vs">VS</div>
                 <img
                   src={`/${selectedMatches["team 2"].split(" ").join("_")}.png`}
                   alt=""
                   className="flag"
-                  onClick={() => setSelected(selectedMatches["team 2"])}
+                  onClick={() => setSelectedTeam(selectedMatches["team 2"])}
                 />
               </div>
-              {selected && (
-                <form className="form">
+              {selectedTeam && (
+                <form className="form" onSubmit={(e) => handleSubmit(e)}>
                   <div className="selected_team">
-                    Selected Team : {selected}
+                    Selected Team : {selectedTeam}
                   </div>
-                  <input type="text" placeholder="Name" className="input_tag" />
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    className="input_tag"
+                    name="name"
+                    onChange={(e) => {
+                      handleChange(e);
+                    }}
+                  />
                   <input
                     type="email"
                     placeholder="Email"
                     className="input_tag"
+                    name="email"
+                    onChange={(e) => {
+                      handleChange(e);
+                    }}
                   />
                   <input
                     type="text"
                     placeholder="Wallet Address"
                     className="input_tag"
+                    name="wallet_address"
+                    onChange={(e) => {
+                      handleChange(e);
+                    }}
                   />
                   <input
                     type="text"
                     placeholder="Facebook Post Link"
                     className="input_tag"
+                    name="facebook_post_link"
+                    onChange={(e) => {
+                      handleChange(e);
+                    }}
                   />
                   <input
                     type="text"
                     placeholder="Twitter Post Link"
                     className="input_tag"
+                    name="twitter_post_link"
+                    onChange={(e) => {
+                      handleChange(e);
+                    }}
                   />
                   <input
-                    type="text"
+                    type="email"
                     placeholder="Referal Email"
                     className="input_tag"
+                    name="referal_email"
+                    onChange={(e) => {
+                      handleChange(e);
+                    }}
                   />
-                  <button className="submit_button">Submit</button>
+                  {error && <div className="error_text">{error}</div>}
+                  <button className="submit_button" type="submit">
+                    Submit
+                  </button>
                 </form>
               )}
             </>

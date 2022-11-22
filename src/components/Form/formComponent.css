@@ -171,7 +171,14 @@
   outline: none;
   cursor: pointer;
 }
-
+.error_text {
+  font-family: "Satoshi";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: rgb(255, 0, 0);
+  margin-bottom: 20px;
+}
 @media (max-width: 1600px) {
   .form_title {
     font-size: 50px;
@@ -231,6 +238,9 @@
   .submit_button {
     padding: 15px 63px;
     font-size: 20px;
+  }
+  .error_text {
+    font-size: 16px;
   }
 }
 @media (max-width: 900px) {
@@ -337,6 +347,9 @@
     padding: 10px 63px;
     font-size: 18px;
   }
+  .error_text {
+    font-size: 14px;
+  }
 }
 @media (max-width: 400px) {
   .form_title {
@@ -389,5 +402,8 @@
   }
   .match_time {
     font-size: 10px;
+  }
+  .error_text {
+    font-size: 12px;
   }
 }
