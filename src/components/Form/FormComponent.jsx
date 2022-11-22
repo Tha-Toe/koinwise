@@ -124,6 +124,11 @@ export default function FormComponent() {
                       ? each.matchname.length * 7
                       : each.matchname.length * 10
                   }px`,
+                  border: `${
+                    selectedMatches.matchname === each.matchname
+                      ? "2px solid #2878e0"
+                      : "none"
+                  }`,
                 }}
                 key={index}
                 onClick={() => {
@@ -144,6 +149,13 @@ export default function FormComponent() {
               <div className="select_container">
                 <img
                   src={`/${selectedMatches["team 1"].split(" ").join("_")}.png`}
+                  style={{
+                    border: `${
+                      selectedTeam === selectedMatches["team 1"]
+                        ? "5px solid #2878e0"
+                        : "none"
+                    }`,
+                  }}
                   alt=""
                   className="flag"
                   onClick={() => setSelectedTeam(selectedMatches["team 1"])}
@@ -151,6 +163,13 @@ export default function FormComponent() {
                 <div className="vs">VS</div>
                 <img
                   src={`/${selectedMatches["team 2"].split(" ").join("_")}.png`}
+                  style={{
+                    border: `${
+                      selectedTeam === selectedMatches["team 2"]
+                        ? "5px solid #2878e0"
+                        : "none"
+                    }`,
+                  }}
                   alt=""
                   className="flag"
                   onClick={() => setSelectedTeam(selectedMatches["team 2"])}
