@@ -75,8 +75,6 @@ export default function FormComponent() {
       setError("Please enter your facebook post link");
     } else if (!inputData.twitter_post_link) {
       setError("Please enter your twitter post link");
-    } else if (!inputData.referal_email) {
-      setError("Please enter your referal email");
     } else {
       setSuccess(true);
       setSelectedMatches(null);
@@ -210,7 +208,7 @@ export default function FormComponent() {
                   />
                   <input
                     type="email"
-                    placeholder="Referal Email"
+                    placeholder="Referal Email (optional)"
                     className="input_tag"
                     name="referal_email"
                     onChange={(e) => {

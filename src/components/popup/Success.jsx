@@ -8,7 +8,7 @@ export default function Success({ setSuccess }) {
       <div className="success_child">
         <FontAwesomeIcon icon={faCircleCheck} className="success_icon" />
         <div className="success_text_container">
-          <div className="thanks">Thank for submited your entries.</div>
+          <div className="thanks">Thank for submtting your entries.</div>
           <div className="notify">
             You will get notify if your team win the match.
           </div>

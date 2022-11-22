@@ -11,8 +11,10 @@ export default function Fail({ setFail }) {
       <div className="fail_child">
         <FontAwesomeIcon icon={faCircleXmark} className="fail_icon" />
         <div className="fail_text_container">
-          <div className="wrong">Something Went Wrong.</div>
-          <div className="try_again">Try again later </div>
+          <div className="wrong">
+            You have already submitted your entry for this match
+          </div>
+          {/* <div className="try_again">Try again later </div> */}
         </div>
         <button className="ok_button" onClick={() => setFail(false)}>
           OK
