@@ -152,7 +152,7 @@ export default function FormComponent() {
                   style={{
                     border: `${
                       selectedTeam === selectedMatches["team 1"]
-                        ? "5px solid #2878e0"
+                        ? "2px solid #2878e0"
                         : "none"
                     }`,
                   }}
@@ -166,7 +166,7 @@ export default function FormComponent() {
                   style={{
                     border: `${
                       selectedTeam === selectedMatches["team 2"]
-                        ? "5px solid #2878e0"
+                        ? "2px solid #2878e0"
                         : "none"
                     }`,
                   }}
