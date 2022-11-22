@@ -1,0 +1,381 @@
+[
+    {
+        "matchname": "Qatar vs Ecuador",
+        "matchdate":"20/11/2022",
+        "team 1":"Qatar",
+        "team 2":"Equador"
+    },
+    {
+        "matchname": "England vs Iran",
+        "matchdate":"21/11/2022",
+        "team 1":"England",
+        "team 2":"Iran"
+    },
+    {
+        "matchname": "Senegal vs Netherlands",
+        "matchdate":"21/11/2022",
+        "team 1":"Senegal",
+        "team 2":"Netherlands"
+    },
+    {
+        "matchname": "USA vs Wales",
+        "matchdate":"22/11/2022",
+        "team 1":"USA",
+        "team 2":"Wales"
+    },
+    {
+        "matchname": "Argentina vs Saudi Arabia",
+        "matchdate":"22/11/2022",
+        "team 1":"Argentina",
+        "team 2":"Saudi Arabia"
+    },
+    {
+        "matchname": "Denmark vs Tunisia",
+        "matchdate":"22/11/2022",
+        "team 1":"Denmark",
+        "team 2":"Tunisia"
+    },
+    {
+        "matchname": "Mexico vs Poland",
+        "matchdate":"22/11/2022",
+        "team 1":"Mexico",
+        "team 2":"Poland"
+    },
+    {
+        "matchname": "France vs Australia",
+        "matchdate":"23/11/2022",
+        "team 1":"France",
+        "team 2":"Australia"
+    },
+    {
+        "matchname": "Morocco vs Croatia",
+        "matchdate":"23/11/2022",
+        "team 1":"Morocco",
+        "team 2":"Croatia"
+    },
+    {
+        "matchname": "Germany vs Japan",
+        "matchdate":"23/11/2022",
+        "team 1":"Germany",
+        "team 2":"Japan"
+    },
+    {
+        "matchname": "Spain vs Costa Rica",
+        "matchdate":"23/11/2022",
+        "team 1":"Spain",
+        "team 2":"Costa Rica"
+    },
+    {
+        "matchname": "Belgium vs Canada",
+        "matchdate":"24/11/2022",
+        "team 1":"Belgium",
+        "team 2":"Canada"
+    },
+    {
+        "matchname": "Switzerland vs Cameroon",
+        "matchdate":"24/11/2022",
+        "team 1":"Spain",
+        "team 2":"Costa Rica"
+    },
+    {
+        "matchname": "Uruguay vs South Korea",
+        "matchdate":"24/11/2022",
+        "team 1":"Uruguay",
+        "team 2":"South Korea"
+    },
+    {
+        "matchname": "Portugal vs Ghana",
+        "matchdate":"24/11/2022",
+        "team 1":"Portugal",
+        "team 2":"Ghana"
+    },
+    {
+        "matchname": "Brazil vs Serbia",
+        "matchdate":"25/11/2022",
+        "team 1":"Brazil",
+        "team 2":"Serbia"
+    },
+    {
+        "matchname": "Wales vs Iran",
+        "matchdate":"25/11/2022",
+        "team 1":"Wales",
+        "team 2":"Iran"
+    },
+    {
+        "matchname": "Qatar vs Senegal",
+        "matchdate":"25/11/2022",
+        "team 1":"Qatar",
+        "team 2":"Senegal"
+    },
+    {
+        "matchname": "Netherlands vs Ecuador",
+        "matchdate":"25/11/2022",
+        "team 1":"Netherlands",
+        "team 2":"Ecuador"
+    },
+    {
+        "matchname": "England vs USA",
+        "matchdate":"26/11/2022",
+        "team 1":"England",
+        "team 2":"USA"
+    },
+    {
+        "matchname": "Tunisia vs Australia",
+        "matchdate":"26/11/2022",
+        "team 1":"Tunisia",
+        "team 2":"Australia"
+    },
+    {
+        "matchname": "Poland vs Saudi Arabia",
+        "matchdate":"26/11/2022",
+        "team 1":"Poland",
+        "team 2":"Saudi Arabia"
+    },
+    {
+        "matchname": "France vs Denmark",
+        "matchdate":"26/11/2022",
+        "team 1":"France",
+        "team 2":"Denmark"
+    },
+    {
+        "matchname": "Argentina vs Denmark",
+        "matchdate":"27/11/2022",
+        "team 1":"Argentina",
+        "team 2":"Denmark"
+    },
+    {
+        "matchname": "Japan vs Costa Rica",
+        "matchdate":"27/11/2022",
+        "team 1":"Japan",
+        "team 2":"Costa Rica"
+    },
+    {
+        "matchname": "Belgium vs Morocco",
+        "matchdate":"27/11/2022",
+        "team 1":"Belgium",
+        "team 2":"Morocco"
+    },
+    {
+        "matchname": "Croatia vs Canada",
+        "matchdate":"27/11/2022",
+        "team 1":"Croatia",
+        "team 2":"Canada"
+    },
+    {
+        "matchname": "Spain vs Germany",
+        "matchdate":"28/11/2022",
+        "team 1":"Spain",
+        "team 2":"Germany"
+    },
+    {
+        "matchname": "Cameroon vs Serbia",
+        "matchdate":"28/11/2022",
+        "team 1":"Cameroon",
+        "team 2":"Serbia"
+    },
+    {
+        "matchname": "South korea vs Ghana",
+        "matchdate":"28/11/2022",
+        "team 1":"South korea",
+        "team 2":"Ghana"
+    },
+    {
+        "matchname": "Portugal vs Uruguay",
+        "matchdate":"29/11/2022",
+        "team 1":"Portugal",
+        "team 2":"Uruguay"
+    },
+    {
+        "matchname": "Ecuador vs Senegal",
+        "matchdate":"29/11/2022",
+        "team 1":"Ecuador",
+        "team 2":"Senegal"
+    },
+    {
+        "matchname": "Netherlands vs Qatar",
+        "matchdate":"29/11/2022",
+        "team 1":"Netherlands",
+        "team 2":"Qatar"
+    },
+    {
+        "matchname": "Iran vs USA",
+        "matchdate":"30/11/2022",
+        "team 1":"Iran",
+        "team 2":"USA"
+    },
+    {
+        "matchname": "Wales vs England",
+        "matchdate":"30/11/2022",
+        "team 1":"Wales",
+        "team 2":"England"
+    },
+    {
+        "matchname": "Tunisia vs France",
+        "matchdate":"30/11/2022",
+        "team 1":"Tunisia",
+        "team 2":"France"
+    },
+    {
+        "matchname": "Australia vs Denmark",
+        "matchdate":"30/11/2022",
+        "team 1":"Australia",
+        "team 2":"Denmark"
+    },
+    {
+        "matchname": "Poland vs Argentina",
+        "matchdate":"01/12/2022",
+        "team 1":"Poland",
+        "team 2":"Argentina"
+    },
+    {
+        "matchname": "Saudi Arabia vs Mexico",
+        "matchdate":"01/12/2022",
+        "team 1":"Saudi Arabia",
+        "team 2":"Mexico"
+    },
+    {
+        "matchname": "Croatia vs Belgium",
+        "matchdate":"01/12/2022",
+        "team 1":"Croatia",
+        "team 2":"Belgium"
+    },
+    {
+        "matchname": "Canada vs Morocco",
+        "matchdate":"01/12/2022",
+        "team 1":"Canada",
+        "team 2":"Morocco"
+    },
+    {
+        "matchname": "Japan vs Spain",
+        "matchdate":"02/12/2022",
+        "team 1":"Japan",
+        "team 2":"Spain"
+    },
+    {
+        "matchname": "Costa Rica vs Germany",
+        "matchdate":"02/12/2022",
+        "team 1":"Costa Rica",
+        "team 2":"Germany"
+    },
+    {
+        "matchname": "South Korea vs Portugal",
+        "matchdate":"02/12/2022",
+        "team 1":"South Korea",
+        "team 2":"Portugal"
+    },
+    {
+        "matchname": "Ghana vs Uruguay",
+        "matchdate":"02/12/2022",
+        "team 1":"Ghana",
+        "team 2":"Uruguay"
+    },
+    {
+        "matchname": "Serbia vs Switzerland",
+        "matchdate":"03/12/2022",
+        "team 1":"Serbia",
+        "team 2":"Switzerland"
+    },
+    {
+        "matchname": "Cameroon vs Brazil",
+        "matchdate":"03/12/2022",
+        "team 1":"Cameroon",
+        "team 2":"Brazil"
+    },
+    {
+        "matchname": "Round of 16(1)",
+        "matchdate":"03/12/2022",
+        "team 1":"TBD",
+        "team 2":"TBD"
+    },
+    {
+        "matchname": "Round of 16(2)",
+        "matchdate":"04/12/2022",
+        "team 1":"TBD",
+        "team 2":"TBD"
+    },
+    {
+        "matchname": "Round of 16(3)",
+        "matchdate":"04/12/2022",
+        "team 1":"TBD",
+        "team 2":"TBD"
+    },
+    {
+        "matchname": "Round of 16(4)",
+        "matchdate":"05/12/2022",
+        "team 1":"TBD",
+        "team 2":"TBD"
+    },
+    {
+        "matchname": "Round of 16(5)",
+        "matchdate":"05/12/2022",
+        "team 1":"TBD",
+        "team 2":"TBD"
+    },
+    {
+        "matchname": "Round of 16(6)",
+        "matchdate":"06/12/2022",
+        "team 1":"TBD",
+        "team 2":"TBD"
+    },
+    {
+        "matchname": "Round of 16(7)",
+        "matchdate":"06/12/2022",
+        "team 1":"TBD",
+        "team 2":"TBD"
+    },
+    {
+        "matchname": "Round of 16(8)",
+        "matchdate":"07/12/2022",
+        "team 1":"TBD",
+        "team 2":"TBD"
+    },
+    {
+        "matchname": "Quarter-finals(1)",
+        "matchdate":"09/12/2022",
+        "team 1":"TBD",
+        "team 2":"TBD"
+    },
+    {
+        "matchname": "Quarter-finals(2)",
+        "matchdate":"10/12/2022",
+        "team 1":"TBD",
+        "team 2":"TBD"
+    },
+    {
+        "matchname": "Quarter-finals(3)",
+        "matchdate":"10/12/2022",
+        "team 1":"TBD",
+        "team 2":"TBD"
+    },
+    {
+        "matchname": "Quarter-finals(4)",
+        "matchdate":"11/12/2022",
+        "team 1":"TBD",
+        "team 2":"TBD"
+    },
+    {
+        "matchname": "Semi-finals(1)",
+        "matchdate":"14/12/2022",
+        "team 1":"TBD",
+        "team 2":"TBD"
+    },
+    {
+        "matchname": "Semi-finals(2)",
+        "matchdate":"15/12/2022",
+        "team 1":"TBD",
+        "team 2":"TBD"
+    },
+    {
+        "matchname": "Third place play-off",
+        "matchdate":"17/12/2022",
+        "team 1":"TBD",
+        "team 2":"TBD"
+    },
+    {
+        "matchname": "Final",
+        "matchdate":"18/12/2022",
+        "team 1":"TBD",
+        "team 2":"TBD"
+    }
+
+]

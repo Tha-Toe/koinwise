@@ -6,6 +6,10 @@ import WhatAndWhere from "./pages/WhatAndWhere";
 import EarnAndSwap from "./pages/EarnAndSwap";
 import Sports from "./pages/Sports";
 import Footer from "./pages/Footer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Form from "./pages/Form";
+import FormComponent from "./components/Form/FormComponent";
+
 function App() {
   const [buttonList] = useState([
     { name: "Home", id: "home" },
@@ -33,24 +37,36 @@ function App() {
 
   return (
     <div className="app_container">
-      <Main
-        buttonList={buttonList}
-        setSelected={setSelected}
-        selected={selected}
-        openDropDown={openDropDown}
-        setOpenDropDown={setOpenDropDown}
-      />
-      <div id="about"></div>
-      <WhatAndWhere />
-      <EarnAndSwap />
-      <Sports />
-      <Footer
-        buttonList={buttonList}
-        setSelected={setSelected}
-        selected={selected}
-        openDropDown={openDropDown}
-        setOpenDropDown={setOpenDropDown}
-      />
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Main
+                  buttonList={buttonList}
+                  setSelected={setSelected}
+                  selected={selected}
+                  openDropDown={openDropDown}
+                  setOpenDropDown={setOpenDropDown}
+                />
+                <div id="about"></div>
+                <WhatAndWhere />
+                <FormComponent />
+                <EarnAndSwap />
+                <Sports />
+                <Footer
+                  buttonList={buttonList}
+                  setSelected={setSelected}
+                  selected={selected}
+                  openDropDown={openDropDown}
+                  setOpenDropDown={setOpenDropDown}
+                />
+              </>
+            }
+          />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

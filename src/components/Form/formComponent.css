@@ -1,0 +1,393 @@
+.form_component_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.form_title {
+  font-family: "Satoshi";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 120%;
+  background: linear-gradient(93.25deg, #4486dc 9.29%, #4fe0b5 75.09%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-top: 50px;
+}
+.sub_title {
+  font-family: "Satoshi";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 137%;
+  color: #ffffff;
+  margin-top: 50px;
+  max-width: 80%;
+  width: 80%;
+  text-align: start;
+}
+.note {
+  font-family: "Satoshi";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 137%;
+  color: #ffffff;
+  max-width: 80%;
+  margin-top: 10px;
+  width: 80%;
+  text-align: start;
+}
+
+.margin_bar_form {
+  height: 4px;
+  max-width: 80%;
+  width: 80%;
+  background: linear-gradient(93.25deg, #4486dc 9.29%, #4fe0b5 75.09%);
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+.fifa_title {
+  font-family: "Satoshi";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 120%;
+  background: linear-gradient(93.25deg, #4486dc 9.29%, #4fe0b5 75.09%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.matches_container {
+  overflow: scroll;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 80%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.matches_container::-webkit-scrollbar {
+  display: none;
+}
+
+.match_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 20px 20px;
+  border-radius: 8px;
+  min-width: 250px;
+}
+.match_name {
+  font-family: "Satoshi";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+}
+.match_time {
+  font-family: "Satoshi";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  margin-top: 10px;
+}
+.select_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 80%;
+}
+
+.vs {
+  font-family: "Satoshi";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  color: white;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.flag {
+  width: 200px;
+  height: 100px;
+}
+
+.form {
+  width: 80%;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.selected_team {
+  font-family: "Satoshi";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  color: white;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.input_tag {
+  background: #0b2241;
+  outline: none;
+  border: none;
+  width: 60%;
+  color: white;
+  padding: 20px 20px 20px 30px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.submit_button {
+  padding: 15px 63px;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Satoshi";
+  font-style: normal;
+  line-height: 120%;
+  background: linear-gradient(93.25deg, #4486dc 9.29%, #4fe0b5 75.09%);
+  border-radius: 4px;
+  color: black;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1600px) {
+  .form_title {
+    font-size: 50px;
+    margin-top: 50px;
+  }
+  .sub_title {
+    font-size: 22px;
+    margin-top: 50px;
+  }
+  .note {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 1400px) {
+  .form_title {
+    font-size: 40px;
+    margin-top: 50px;
+  }
+  .sub_title {
+    font-size: 20px;
+    margin-top: 50px;
+  }
+  .note {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .fifa_title {
+    font-size: 25px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .vs {
+    font-size: 24px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .flag {
+    width: 200px;
+    height: 100px;
+  }
+
+  .selected_team {
+    font-size: 25px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  .input_tag {
+    width: 60%;
+    padding: 20px 20px 20px 30px;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .submit_button {
+    padding: 15px 63px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 900px) {
+  .form_title {
+    font-size: 37px;
+    margin-top: 50px;
+  }
+  .sub_title {
+    font-size: 16px;
+    margin-top: 50px;
+  }
+  .note {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  .fifa_title {
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .vs {
+    font-size: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .flag {
+    width: 150px;
+    height: 75px;
+  }
+
+  .selected_team {
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  .input_tag {
+    width: 80%;
+    padding: 20px 20px 20px 30px;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .submit_button {
+    padding: 15px 63px;
+    font-size: 20px;
+  }
+  .match_container {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px 10px;
+  }
+  .match_name {
+    font-size: 14px;
+  }
+  .match_time {
+    font-size: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .form_title {
+    font-size: 30px;
+    margin-top: 50px;
+  }
+  .sub_title {
+    font-size: 13px;
+    margin-top: 30px;
+  }
+  .note {
+    font-size: 11px;
+    margin-top: 10px;
+  }
+  .fifa_title {
+    font-size: 18px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  .vs {
+    font-size: 18px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .flag {
+    width: 120px;
+    height: 60px;
+  }
+
+  .selected_team {
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .input_tag {
+    width: 80%;
+    padding: 15px 15px 15px 30px;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .submit_button {
+    padding: 10px 63px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 400px) {
+  .form_title {
+    font-size: 28px;
+    margin-top: 50px;
+  }
+  .sub_title {
+    font-size: 12px;
+    margin-top: 30px;
+  }
+  .note {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+  .fifa_title {
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .vs {
+    font-size: 18px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .flag {
+    width: 90px;
+    height: 45px;
+  }
+
+  .selected_team {
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .input_tag {
+    width: 80%;
+    padding: 10px 10px 10px 20px;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .submit_button {
+    padding: 10px 63px;
+    font-size: 16px;
+  }
+  .match_name {
+    font-size: 12px;
+  }
+  .match_time {
+    font-size: 10px;
+  }
+}
