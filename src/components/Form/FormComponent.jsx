@@ -5,6 +5,73 @@ import { useMediaPredicate } from "react-media-hook";
 import fifaschedule from "../../fifaschedule.json";
 import Success from "../popup/Success";
 import Fail from "../popup/Fail";
+import { doc, setDoc, updateDoc, getDoc } from "firebase/firestore";
+import { db } from "../../firebase";
+import LoadingSpinner from "../popup/LoadingSpinner";
+export const addDataToFirebase = async ({
+  setFail,
+  setSuccess,
+  inputData,
+  selectedMatches,
+  selectedTeam,
+}) => {
+  const currDate = new Date();
+  let date = currDate.getDate();
+  let month = currDate.getMonth() + 1;
+  let year = currDate.getFullYear();
+  let collectionDate =
+    date.toString() + "-" + month.toString() + "-" + year.toString();
+
+  const docRef = doc(db, "koinwise", "data");
+  const docSnap = await getDoc(docRef);
+  const docData = docSnap.data();
+  if (docData) {
+    console.log(docData);
+    if (docData[inputData.email + collectionDate + selectedMatches.matchname]) {
+      setFail(true);
+      return;
+    } else {
+      await updateDoc(docRef, {
+        [inputData.email + collectionDate + selectedMatches.matchname]: {
+          matchdate: selectedMatches.matchdate,
+          matchname: selectedMatches.matchname,
+          selectedteam: selectedTeam,
+          name: inputData.name,
+          email: inputData.email,
+          walletaddress: inputData.wallet_address,
+          fbpostlink: inputData.facebook_post_link,
+          twitterlink: inputData.twitter_post_link,
+          referalemail: inputData.referal_email,
+          wonstatusoftokens: false,
+          referalstatusoftokens: false,
+          status: false,
+        },
+      });
+      setSuccess(true);
+      return;
+    }
+  } else {
+    const res = await setDoc(doc(db, "koinwise", "data"), {
+      [inputData.email + collectionDate + selectedMatches.matchname]: {
+        matchdate: selectedMatches.matchdate,
+        matchname: selectedMatches.matchname,
+        selectedteam: selectedTeam,
+        name: inputData.name,
+        email: inputData.email,
+        walletaddress: inputData.wallet_address,
+        fbpostlink: inputData.facebook_post_link,
+        twitterlink: inputData.twitter_post_link,
+        referalemail: inputData.referal_email,
+        wonstatusoftokens: false,
+        referalstatusoftokens: false,
+        status: false,
+      },
+    });
+    setSuccess(true);
+    return;
+  }
+};
+
 const useHorizontalScrollMatches = ({ matches }) => {
   const matchesScrollRef = useRef();
 
@@ -32,7 +99,6 @@ export default function FormComponent() {
       let todayMatchesArray = allMatches.filter((each) => {
         return each.matchdate === todayDateFormat;
       });
-      console.log(todayMatchesArray);
       setMatches(todayMatchesArray);
     }
   }, [fifaschedule]);
@@ -52,7 +118,7 @@ export default function FormComponent() {
     wallet_address: "",
     facebook_post_link: "",
     twitter_post_link: "",
-    referal_email: "",
+    referal_email: null,
   });
 
   const handleChange = (e) => {
@@ -62,7 +128,9 @@ export default function FormComponent() {
   const [success, setSuccess] = useState(false);
   const [fail, setFail] = useState(false);
   const [error, setError] = useState(null);
-  const handleSubmit = (e) => {
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setError(null);
     if (!inputData.name) {
@@ -76,7 +144,15 @@ export default function FormComponent() {
     } else if (!inputData.twitter_post_link) {
       setError("Please enter your twitter post link");
     } else {
-      setSuccess(true);
+      setLoading(true);
+      await addDataToFirebase({
+        setFail,
+        setSuccess,
+        inputData,
+        selectedMatches,
+        selectedTeam,
+      });
+      setLoading(false);
       setSelectedMatches(null);
       setSelectedTeam(null);
       setInputData({
@@ -92,11 +168,11 @@ export default function FormComponent() {
   return (
     <div className="form_component_container">
       {success && <Success setSuccess={setSuccess} />}
-      {fail && <Fail setFail={setFail} />}={" "}
+      {fail && <Fail setFail={setFail} />}= {loading && <LoadingSpinner />}
       <div className="form_title">Rewards Programs</div>
       <div className="sub_title">
-        Select the winning team of the day and earn 1,500 KIS tokens and whoever
-        refers his friends will get 1,000 tokens
+        Select the winning team of the day and earn 1,000 KIS tokens and whoever
+        refers his friends will get 200 tokens
       </div>
       <div className="note">
         Tag at least 5 friends of yours in Facebook & Twitter post to get

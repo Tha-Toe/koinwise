@@ -179,7 +179,7 @@ export default function KoinSports() {
         for your favourite players!
       </div>
       <div className="margin_bar"></div>
-      <div
+      {/* <div
         ref={partanerShipRef}
         className={`${"ourPartner_container"} ${
           partanerShipTrueVisible ? "koinSportsAnimation" : ""
@@ -224,7 +224,7 @@ export default function KoinSports() {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

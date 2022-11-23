@@ -9,6 +9,7 @@ import Footer from "./pages/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Form from "./pages/Form";
 import FormComponent from "./components/Form/FormComponent";
+import Admin from "./pages/Admin";
 
 function App() {
   const [buttonList] = useState([
@@ -18,8 +19,8 @@ function App() {
     { name: "Staking", id: "staking" },
     { name: "Swap Process", id: "swap_process" },
     { name: "Koin Sports", id: "koin_sports" },
-    { name: "Our NFTs", id: "our_nfts" },
-    { name: "Our Team", id: "our_team" },
+    // { name: "Our NFTs", id: "our_nfts" },
+    // { name: "Our Team", id: "our_team" },
   ]);
   const [selected, setSelected] = useState("Home");
   const [openDropDown, setOpenDropDown] = useState(false);
@@ -65,6 +66,7 @@ function App() {
               </>
             }
           />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -37,7 +37,7 @@ export default function Nav({
         {selected}
         <FontAwesomeIcon icon={faCaretDown} className="drop_down_icon" />
       </div>
-      <button className="connect_button">Connect Wallet</button>
+      {/* <button className="connect_button">Connect Wallet</button> */}
       {openDropDown && (
         <div className="mobile_nav_page">
           <div className="cancel_container">

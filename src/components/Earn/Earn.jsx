@@ -47,6 +47,8 @@ export default function Earn() {
       >
         Koin Stake
       </div>
+      <div className="launching_soon">Launching Soon</div>
+
       <div
         className={`${"earn_header"} ${
           earnHeaderTrueVisible ? "earn_header_animation" : ""

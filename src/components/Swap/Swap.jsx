@@ -48,6 +48,7 @@ export default function Swap() {
       >
         Koin-Swap
       </div>
+      <div className="launching_soon">Launching Soon</div>
       <div
         className={`${"swap_step_container"} ${
           swapHeaderTrueVisible ? "swap_step_animation" : ""
