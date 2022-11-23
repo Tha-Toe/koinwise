@@ -21,21 +21,6 @@
   transform: scale(0);
 }
 
-.swap_header_animation {
-  animation: swap_card_ani 0.7s ease-in;
-  transform: scale(1);
-}
-@keyframes swap_card_ani {
-  from {
-    transform: scale(0);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
 .swap_step_container {
   width: 100%;
   display: flex;
@@ -93,7 +78,29 @@
   margin-bottom: 150px;
   margin: 0 auto;
   text-align: center;
+  background: linear-gradient(93.25deg, #4486dc 9.29%, #4fe0b5 75.09%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  transform: scale(0);
 }
+
+.swap_header_animation {
+  animation: swap_card_ani 0.7s ease-in;
+  transform: scale(1);
+}
+@keyframes swap_card_ani {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .swap_card_header_contaner {
   display: flex;
   flex-direction: row;
