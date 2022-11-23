@@ -146,13 +146,22 @@ export default function KoinSports() {
         Wallet anytime. BSC is the blockchain that powers Koinwise.
       </div>
       <div className="margin_bar"></div>
-      <div
-        className={`${"color_header"} ${
-          koinSportsNftTrueVisible ? "koinSportsAnimation" : ""
-        }`}
-        id="our_nfts"
-      >
-        Sports NFT:
+      <div className="nft_header_container">
+        <div
+          className={`${"color_header"} ${
+            koinSportsNftTrueVisible ? "koinSportsAnimation" : ""
+          }`}
+          id="our_nfts"
+        >
+          Sports NFT:
+        </div>
+        <div
+          className={`${"launching_soon_nft"} ${
+            koinSportsNftTrueVisible ? "koinSportsAnimation" : ""
+          }`}
+        >
+          (Launching Soon)
+        </div>
       </div>
       <div
         className={`${"special"} ${

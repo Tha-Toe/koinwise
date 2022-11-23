@@ -139,7 +139,11 @@
   opacity: 0;
   position: relative;
 }
-
+.nft_header_container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
 .color_header {
   font-family: "Satoshi";
   font-style: normal;
@@ -151,9 +155,26 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-  margin-bottom: 32px;
   opacity: 0;
   position: relative;
+}
+.launching_soon_nft {
+  font-family: "Satoshi";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 120%;
+  color: #ffffff;
+  margin: 0 auto;
+  text-align: center;
+  background: linear-gradient(93.25deg, #4486dc 9.29%, #4fe0b5 75.09%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0;
+  position: relative;
+  margin-left: 15px;
+  margin-bottom: 5px;
 }
 .special {
   font-family: "Satoshi";
@@ -397,7 +418,6 @@
   /*edit */
   .color_header {
     font-size: 45px;
-    margin-bottom: 32px;
   }
   .special {
     font-size: 25px;
@@ -443,6 +463,11 @@
   }
   .team_member_position {
     font-size: 16px;
+  }
+
+  .launching_soon_nft {
+    margin-bottom: 5px;
+    font-size: 25px;
   }
 }
 @media (max-width: 1080px) {
@@ -500,7 +525,7 @@
 
   .color_header {
     font-size: 37px;
-    margin-bottom: 22px;
+    margin-bottom: 5px;
   }
   .special {
     font-size: 20px;
@@ -596,7 +621,7 @@
 
   .color_header {
     font-size: 30px;
-    margin-bottom: 22px;
+    margin-bottom: 5px;
   }
   .special {
     font-size: 20px;
@@ -657,6 +682,9 @@
   .team_member_position {
     font-size: 12px;
   }
+  .launching_soon_nft {
+    font-size: 18px;
+  }
 }
 @media (max-width: 400px) {
   .koinSports_header {
@@ -704,7 +732,7 @@
 
   .color_header {
     font-size: 25px;
-    margin-bottom: 22px;
+    margin-bottom: 5px;
   }
   .special {
     font-size: 16px;
@@ -758,5 +786,8 @@
   }
   .team_member_position {
     font-size: 10px;
+  }
+  .launching_soon_nft {
+    font-size: 14px;
   }
 }

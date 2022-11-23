@@ -25,14 +25,46 @@ export const addDataToFirebase = async ({
   const docRef = doc(db, "koinwise", "data");
   const docSnap = await getDoc(docRef);
   const docData = docSnap.data();
-  if (docData) {
+  if (docData && docData.list.length > 0) {
+    let filterData = docData.list.filter((each) => {
+      return (
+        each.matchdate === selectedMatches.matchdate &&
+        each.matchname === selectedMatches.matchname &&
+        each.email === inputData.email
+      );
+    });
     console.log(docData);
-    if (docData[inputData.email + collectionDate + selectedMatches.matchname]) {
+    if (filterData.length > 0) {
       setFail(true);
       return;
     } else {
       await updateDoc(docRef, {
-        [inputData.email + collectionDate + selectedMatches.matchname]: {
+        list: [
+          ...docData.list,
+          {
+            matchdate: selectedMatches.matchdate,
+            matchname: selectedMatches.matchname,
+            selectedteam: selectedTeam,
+            name: inputData.name,
+            email: inputData.email,
+            walletaddress: inputData.wallet_address,
+            fbpostlink: inputData.facebook_post_link,
+            twitterlink: inputData.twitter_post_link,
+            referalemail: inputData.referal_email,
+            phonenumber: inputData.phone_number,
+            wonstatusoftokens: false,
+            referalstatusoftokens: false,
+            status: false,
+          },
+        ],
+      });
+      setSuccess(true);
+      return;
+    }
+  } else {
+    const res = await setDoc(doc(db, "koinwise", "data"), {
+      list: [
+        {
           matchdate: selectedMatches.matchdate,
           matchname: selectedMatches.matchname,
           selectedteam: selectedTeam,
@@ -42,30 +74,12 @@ export const addDataToFirebase = async ({
           fbpostlink: inputData.facebook_post_link,
           twitterlink: inputData.twitter_post_link,
           referalemail: inputData.referal_email,
+          phonenumber: inputData.phone_number,
           wonstatusoftokens: false,
           referalstatusoftokens: false,
           status: false,
         },
-      });
-      setSuccess(true);
-      return;
-    }
-  } else {
-    const res = await setDoc(doc(db, "koinwise", "data"), {
-      [inputData.email + collectionDate + selectedMatches.matchname]: {
-        matchdate: selectedMatches.matchdate,
-        matchname: selectedMatches.matchname,
-        selectedteam: selectedTeam,
-        name: inputData.name,
-        email: inputData.email,
-        walletaddress: inputData.wallet_address,
-        fbpostlink: inputData.facebook_post_link,
-        twitterlink: inputData.twitter_post_link,
-        referalemail: inputData.referal_email,
-        wonstatusoftokens: false,
-        referalstatusoftokens: false,
-        status: false,
-      },
+      ],
     });
     setSuccess(true);
     return;
@@ -119,6 +133,7 @@ export default function FormComponent() {
     facebook_post_link: "",
     twitter_post_link: "",
     referal_email: null,
+    phone_number: "",
   });
 
   const handleChange = (e) => {
@@ -161,7 +176,8 @@ export default function FormComponent() {
         wallet_address: "",
         facebook_post_link: "",
         twitter_post_link: "",
-        referal_email: "",
+        referal_email: null,
+        phone_number: "",
       });
     }
   };
@@ -172,7 +188,7 @@ export default function FormComponent() {
       <div className="form_title">Rewards Programs</div>
       <div className="sub_title">
         Select the winning team of the day and earn 1,000 KIS tokens and whoever
-        refers their friends will get 200 tokens
+        refers his friends will get 200 tokens
       </div>
       <div className="note">
         Tag at least 5 friends of yours in Facebook & Twitter post to get
@@ -306,6 +322,15 @@ export default function FormComponent() {
                     placeholder="Referal Email (optional)"
                     className="input_tag"
                     name="referal_email"
+                    onChange={(e) => {
+                      handleChange(e);
+                    }}
+                  />
+                  <input
+                    type="number"
+                    placeholder="Phone Number (optional)"
+                    className="input_tag"
+                    name="phone_number"
                     onChange={(e) => {
                       handleChange(e);
                     }}

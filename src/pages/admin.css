@@ -6,3 +6,29 @@
   flex-direction: column;
   align-items: center;
 }
+.no_data_to_show {
+  margin-top: 100px;
+  font-family: "Satoshi";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  background: linear-gradient(93.25deg, #4486dc 9.29%, #4fe0b5 75.09%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+.list_container {
+  width: 90%;
+}
+.table_row {
+  background-color: #024694;
+  color: white;
+}
+.table_d {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 12px;
+}
