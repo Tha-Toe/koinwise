@@ -188,7 +188,7 @@ export default function FormComponent() {
       <div className="form_title">Rewards Programs</div>
       <div className="sub_title">
         Select the winning team of the day and earn 1,000 KIS tokens and whoever
-        refers his friends will get 200 tokens
+        refers their friends will get 200 tokens
       </div>
       <div className="note">
         Tag at least 5 friends of yours in Facebook & Twitter post to get
